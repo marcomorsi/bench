@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * classe che fornisce il valore delle propriet� di configurazione dei tests e del DB
+ * classe che fornisce il valore delle proprieta' di configurazione dei tests e del DB
  */
 public class ConfigHelper {
 
