@@ -53,7 +53,7 @@ public class BenchManager {
 		for (Tester t : testers) {
 			printTesterStart(t);
 			t.runTests();
-			printTesterResult(t);
+			printTesterStatistics(t);
 		}
 
 		finish();
@@ -102,19 +102,18 @@ public class BenchManager {
 	 */
 	protected void finish() {
 		// si puo' valutare di fare il drop della tabella. 
-		// per ora no, cosi' posso fare un check sui record inseriti
 	}
 
 	private void printTesterStart(Tester tester) {
-		System.out.println("Executing tester: " + tester.getTestName());
+		System.out.println("Running tester: " + tester.getTestName());
+		System.out.println("-----------------------------------------------------");
 	}
 
-	private void printTesterResult(Tester tester) {
-		System.out.println("-----------------------------------------------------");
-		System.out.println("Result for tester: " + tester.getTestName());
+	private void printTesterStatistics(Tester tester) {
+		System.out.println("Statitics");
 		System.out.println(tester.getTestInfo());
 		tester.getStats().print();
-		System.out.println("-----------------------------------------------------");
+		System.out.println("######################################################");
 		System.out.println("\n");
 
 	}

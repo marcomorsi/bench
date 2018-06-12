@@ -18,7 +18,7 @@ public class SelectTester extends Tester {
 
 	/**
 	 * @param numOfExecutions
-	 *            numero delle volte in cui verr� eseguita la SELECT
+	 *            numero delle volte in cui verra' eseguita la SELECT
 	 */
 	public SelectTester(int numOfExecutions) {
 		super(numOfExecutions);
@@ -83,7 +83,7 @@ public class SelectTester extends Tester {
 
 	@Override
 	public String getTestName() {
-		return "Select Statements by PK";
+		return "SELECT STATEMENTS";
 	}
 
 }

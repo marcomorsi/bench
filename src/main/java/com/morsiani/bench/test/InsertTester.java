@@ -90,14 +90,14 @@ public class InsertTester extends Tester {
 
     @Override
     public String getTestName() {
-        return "Insert Statements";
+        return "INSERT STATEMENTS";
     }
     
     @Override
     public String getTestInfo() {
         
         String info = "Batch Insert Executions: " + this.getNumOfExecutions() + "\n" + 
-                      "Num of inserts per batch: " + numInsertsPerTransaction + "\n";
+                      "N. inserts in each batch: " + numInsertsPerTransaction + "\n";
         
         return info;
     }
