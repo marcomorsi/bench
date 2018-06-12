@@ -16,8 +16,10 @@ In config.properties il paramentro numOfBatchInsertExecutions consente di defini
 Dopo le insert, vengono effettuate Q select e poi si generano le statistiche (min, max, avg).   
 In config.properties il paramentro numOfSelectExecutions consente di definire il numero di esecuzioni delle select.
 
+Per compilare e generare il package del software:
+mvn clean package
 
-Come lanciare il software:
+Per lanciare il software:
 
 java -cp target/bench-1.0-SNAPSHOT.jar;lib/* com.morsiani.bench.main.Main
 
