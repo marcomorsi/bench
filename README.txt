@@ -25,27 +25,27 @@ java -cp target/bench-1.0-SNAPSHOT.jar;lib/* com.morsiani.bench.main.Main
 
 Esempio di output:
 
-Executing tester: Insert Statements
------------------------------------------------------
-Result for tester: Insert Statements
+Running tester: INSERT STATEMENTS
+------------------------------------------------------
+Statitics
 Batch Insert Executions: 20000
-Num of inserts per batch: 10
+N. inserts in each batch: 10
 
-min (to insert a batch of records): 882231 nsec
-max (to insert a batch of records): 932411912 nsec
-avg (to insert a batch of records): 1227909 nsec
-time per record in the batch with min time: 88223 nsec
-time per record in the batch with max time: 93241191 nsec
-avg (to insert a record): 122790 nsec
------------------------------------------------------
+min (to insert a batch of records): 883137 nsec
+max (to insert a batch of records): 111099587 nsec
+avg (to insert a batch of records): 1113992 nsec
+time per record in the batch with min time: 88313 nsec
+time per record in the batch with max time: 11109958 nsec
+avg (to insert a record): 111399 nsec
+######################################################
 
 
-Executing tester: Select Statements by PK
------------------------------------------------------
-Result for tester: Select Statements by PK
+Running tester: SELECT STATEMENTS
+------------------------------------------------------
+Statitics
 Executions: 100000
 
-min: 83785 nsec
-max: 17230690 nsec
-avg: 96656 nsec
------------------------------------------------------
+min: 85144 nsec
+max: 13094437 nsec
+avg: 96621 nsec
+######################################################

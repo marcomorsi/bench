@@ -106,7 +106,7 @@ public class BenchManager {
 
 	private void printTesterStart(Tester tester) {
 		System.out.println("Running tester: " + tester.getTestName());
-		System.out.println("-----------------------------------------------------");
+		System.out.println("------------------------------------------------------");
 	}
 
 	private void printTesterStatistics(Tester tester) {
