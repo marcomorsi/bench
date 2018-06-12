@@ -10,7 +10,7 @@ import java.util.Map.Entry;
  * 
  */
 
-//LinkedHashMap così mantengo l'ordine di inseriemnto delle chiavi
+//LinkedHashMap cosÃ¬ mantengo l'ordine di inseriemnto delle chiavi
 public class Statistics extends LinkedHashMap<String,Long>{
     
 	private static final long serialVersionUID = 1L;

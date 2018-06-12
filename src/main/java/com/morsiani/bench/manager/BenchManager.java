@@ -101,8 +101,8 @@ public class BenchManager {
 	 * metodo per liberare le risorse usate durante i tests (se necessario).
 	 */
 	protected void finish() {
-		// si può valutare di fare il drop della tabella. 
-		// per ora no, così posso fare un check sui record inseriti
+		// si puo' valutare di fare il drop della tabella. 
+		// per ora no, cosi' posso fare un check sui record inseriti
 	}
 
 	private void printTesterStart(Tester tester) {
