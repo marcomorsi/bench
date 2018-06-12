@@ -1,4 +1,4 @@
-Descrizione Progetto
+﻿Descrizione Progetto
 
 L'applicazione effettua dei benchmark sul DB PostgreSQL.
 
@@ -26,26 +26,24 @@ Esempio di output:
 Executing tester: Insert Statements
 -----------------------------------------------------
 Result for tester: Insert Statements
-
-Batch Insert Executions: 10000
+Batch Insert Executions: 20000
 Num of inserts per batch: 10
 
-min (to insert a batch of records): 283189 ns/op
-max (to insert a batch of records): 8022170 ns/op
-avg (to insert a batch of records): 444263 ns/op
-time per record in the bacth with min time: 28318 ns/op
-time per record in the bacth with max time: 802217 ns/op
-avg (to insert a record): 44426 ns/op
+min (to insert a batch of records): 882231 nsec
+max (to insert a batch of records): 932411912 nsec
+avg (to insert a batch of records): 1227909 nsec
+time per record in the batch with min time: 88223 nsec
+time per record in the batch with max time: 93241191 nsec
+avg (to insert a record): 122790 nsec
 -----------------------------------------------------
 
 
-Executing tester: Select Statements
+Executing tester: Select Statements by PK
 -----------------------------------------------------
-Result for tester: Select Statements
+Result for tester: Select Statements by PK
+Executions: 100000
 
-Executions: 50000
-
-min: 42372 ns/op
-max: 2944887 ns/op
-avg: 81844 ns/op
+min: 83785 nsec
+max: 17230690 nsec
+avg: 96656 nsec
 -----------------------------------------------------
