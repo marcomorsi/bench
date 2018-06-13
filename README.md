@@ -36,16 +36,16 @@ Esempio di output
 
 Running tester: INSERT STATEMENTS
 ------------------------------------------------------
-Statitics
-N. esecuzioni di insert-batch: 20000
-N. insert in ogni batch: 10
-
-tempo min (di insert di un batch di record): 879951 nsec
-tempo max (di insert di un batch di record): 271559493 nsec
-tempo avg (di insert di un batch di record): 1322770 nsec
-tempo di insert di un record nel batch con tempo min: 87995 nsec
-tempo di insert di un record nel batch con tempo max: 27155949 nsec
-tempo di insert di un record nel batch con tempo avg: 132277 nsec
+Statitics\
+N. esecuzioni di insert-batch: 20000\
+N. insert in ogni batch: 10\
+\
+tempo min (di insert di un batch di record): 879951 nsec\
+tempo max (di insert di un batch di record): 271559493 nsec\
+tempo avg (di insert di un batch di record): 1322770 nsec\
+tempo di insert di un record nel batch con tempo min: 87995 nsec\
+tempo di insert di un record nel batch con tempo max: 27155949 nsec\
+tempo di insert di un record nel batch con tempo avg: 132277 nsec\
 ######################################################
 
 
