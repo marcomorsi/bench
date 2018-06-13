@@ -20,7 +20,8 @@ Nel file config.properties il paramentro numOfBatchInsertExecutions consente di 
 Dopo le insert, il secondo tester effettua Q select e poi si generano le statistiche (min, max, avg).   
 In config.properties il paramentro numOfSelectExecutions consente di definire il numero di esecuzioni delle select.
 
----Compilazione e generazione del package---
+Compilazione e generazione del package
+--------------------
 
 mvn clean package
 
