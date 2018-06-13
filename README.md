@@ -1,10 +1,11 @@
 Progetto Bench
 ==============
 
+L'applicazione effettua un benchmark sul DB PostgreSQL. In particolare l'applicazione calcola i tempi di min/max/avg per INSERT statements gestiti in batch di dimensione fissa e configurabile dall'utente. Successivamente calcola i tempi di min/max/avg per SELECT statements utilizzando le Primary Key come filtro. Il DB su cui si appoggia è PostgreSQL 10.
+
 Descrizione Progetto
 --------------------
 
-L'applicazione effettua un benchmark sul DB PostgreSQL. In particolare l'applicazione calcola i tempi di min/max/avg per INSERT statements gestiti in batch di dimensione fissa e configurabile dall'utente. Successivamente calcola i tempi di min/max/avg per SELECT statements utilizzando le Primary Key come filtro. Il DB su cui si appoggia è PostgreSQL 10.
 
 Il main contentuto nella omonima classe istanzia un BanchManager per lanciare i tests.
 In particolare il BanchManager apre la connessione al DB, crea una tabella di test (se già presente ne fa la drop), chiude la connessione e crea 2 istanze di Tester  (è l'esecutore vero e proprio dei test) uno per effettuare le Insert e uno per le Select (ho fatto due sotto classi concrete: InsertTester, SelectTester). Ad ogni tester istanziato, il BanchManager richiede l'esecuzione dei suoi test ed al termine stampa le statistiche (tempo min/max/avg per un batch di insert e per una singola select).
