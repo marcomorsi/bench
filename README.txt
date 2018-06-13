@@ -1,4 +1,4 @@
--Descrizione Progetto-
+---Descrizione Progetto---
 
 L'applicazione effettua un benchmark sul DB PostgreSQL. In particolare l'applicazione calcola i tempi di min/max/avg per INSERT statements gestiti in batch di dimensione fissa e configurabile dall'utente. Successivamente calcola i tempi di min/max/avg per SELECT statements utilizzando le Primary Key come filtro. Il DB su cui si appoggia è PostgreSQL 10.
 
@@ -16,14 +16,15 @@ Nel file config.properties il paramentro numOfBatchInsertExecutions consente di 
 Dopo le insert, il secondo tester effettua Q select e poi si generano le statistiche (min, max, avg).   
 In config.properties il paramentro numOfSelectExecutions consente di definire il numero di esecuzioni delle select.
 
--Compilazione e generazione del package-
+---Compilazione e generazione del package---
+
 mvn clean package
 
--Esecuzione del software-
+---Esecuzione del software---
 
 java -cp target/bench-1.0-SNAPSHOT.jar;lib/* com.morsiani.bench.main.Main
 
--Esempio di output-
+---Esempio di output---
 
 Running tester: INSERT STATEMENTS
 ------------------------------------------------------
