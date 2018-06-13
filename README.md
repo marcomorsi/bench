@@ -1,7 +1,8 @@
 Progetto Bench
 ==============
 
----Descrizione Progetto---
+Descrizione Progetto
+--------------------
 
 L'applicazione effettua un benchmark sul DB PostgreSQL. In particolare l'applicazione calcola i tempi di min/max/avg per INSERT statements gestiti in batch di dimensione fissa e configurabile dall'utente. Successivamente calcola i tempi di min/max/avg per SELECT statements utilizzando le Primary Key come filtro. Il DB su cui si appoggia è PostgreSQL 10.
 
