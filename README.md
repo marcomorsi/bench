@@ -48,7 +48,6 @@ tempo di insert di un record nel batch con tempo max: 27155949 nsec\
 tempo di insert di un record nel batch con tempo avg: 132277 nsec\
 ######################################################
 
-
 Running tester: SELECT STATEMENTS
 ------------------------------------------------------
 Statitics
