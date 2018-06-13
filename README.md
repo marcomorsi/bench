@@ -54,6 +54,9 @@ Statitics
 N. esecuzioni: 100000
 
 tempo min: 83331 nsec
+
 tempo max: 130293070 nsec
+
 tempo avg: 98190 nsec
+
 ######################################################
