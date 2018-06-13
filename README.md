@@ -34,18 +34,19 @@ java -cp target/bench-1.0-SNAPSHOT.jar;lib/* com.morsiani.bench.main.Main
 Esempio di output
 --------------------
 
+```
 Running tester: INSERT STATEMENTS
 ------------------------------------------------------
-Statitics\
-N. esecuzioni di insert-batch: 20000\
-N. insert in ogni batch: 10\
-\
-tempo min (di insert di un batch di record): 879951 nsec\
-tempo max (di insert di un batch di record): 271559493 nsec\
-tempo avg (di insert di un batch di record): 1322770 nsec\
-tempo di insert di un record nel batch con tempo min: 87995 nsec\
-tempo di insert di un record nel batch con tempo max: 27155949 nsec\
-tempo di insert di un record nel batch con tempo avg: 132277 nsec\
+Statitics
+N. esecuzioni di insert-batch: 20000
+N. insert in ogni batch: 10
+
+tempo min (di insert di un batch di record): 879951 nsec
+tempo max (di insert di un batch di record): 271559493 nsec
+tempo avg (di insert di un batch di record): 1322770 nsec
+tempo di insert di un record nel batch con tempo min: 87995 nsec
+tempo di insert di un record nel batch con tempo max: 27155949 nsec
+tempo di insert di un record nel batch con tempo avg: 132277 nsec
 ######################################################
 
 Running tester: SELECT STATEMENTS
@@ -54,9 +55,7 @@ Statitics
 N. esecuzioni: 100000
 
 tempo min: 83331 nsec
-
 tempo max: 130293070 nsec
-
 tempo avg: 98190 nsec
-
 ######################################################
+```
