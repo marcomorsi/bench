@@ -28,24 +28,24 @@ Esempio di output:
 Running tester: INSERT STATEMENTS
 ------------------------------------------------------
 Statitics
-Batch Insert Executions: 20000
-N. inserts in each batch: 10
+N. esecuzioni di insert-batch: 20000
+N. insert in ogni batch: 10
 
-min (to insert a batch of records): 883137 nsec
-max (to insert a batch of records): 111099587 nsec
-avg (to insert a batch of records): 1113992 nsec
-time per record in the batch with min time: 88313 nsec
-time per record in the batch with max time: 11109958 nsec
-avg (to insert a record): 111399 nsec
+tempo min (di insert di un batch di record): 879951 nsec
+tempo max (di insert di un batch di record): 271559493 nsec
+tempo avg (di insert di un batch di record): 1322770 nsec
+tempo di insert di un record nel batch con tempo min: 87995 nsec
+tempo di insert di un record nel batch con tempo max: 27155949 nsec
+tempo di insert di un record nel batch con tempo avg: 132277 nsec
 ######################################################
 
 
 Running tester: SELECT STATEMENTS
 ------------------------------------------------------
 Statitics
-Executions: 100000
+N. esecuzioni: 100000
 
-min: 85144 nsec
-max: 13094437 nsec
-avg: 96621 nsec
+tempo min: 83331 nsec
+tempo max: 130293070 nsec
+tempo avg: 98190 nsec
 ######################################################
