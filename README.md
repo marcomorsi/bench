@@ -25,11 +25,13 @@ Compilazione e generazione del package
 
 mvn clean package
 
----Esecuzione del software---
+Esecuzione del software
+--------------------
 
 java -cp target/bench-1.0-SNAPSHOT.jar;lib/* com.morsiani.bench.main.Main
 
----Esempio di output---
+Esempio di output
+--------------------
 
 Running tester: INSERT STATEMENTS
 ------------------------------------------------------
