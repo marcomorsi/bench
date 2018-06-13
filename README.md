@@ -16,13 +16,14 @@ I testers si appoggiano ad un _DbHelper_ per le operazioni di connessione/discon
 
 Il DbHelper si appoggia alla classe _ConfigHelper_ per lalettura del file __config.properties__ (in "src/main/resources") in cui sono presenti i paramentri per la connessione a PotgreSQL ed il numero di INSERT/SELECT.
 
+### Configurazione dei Tester
 Il primo tester gestisce le insert. Vengono eseguite in batch da N statements e la commit viene fatta al termine dal batch.
-Nel file config.properties il paramentro numOfInsertStatementsPerTransaction consente di definire il numero di statement per batch.
+Nel file config.properties il paramentro __numOfInsertStatementsPerTransaction__ consente di definire il numero di statement per batch.
 Venogono fatte M esecuzioni del batch e poi si generano le statistiche (min, max, avg). 
-Nel file config.properties il paramentro numOfBatchInsertExecutions consente di definire il numero di esecuzioni del batch.
+Nel file config.properties il paramentro __numOfBatchInsertExecutions__ consente di definire il numero di esecuzioni del batch.
 
 Dopo le insert, il secondo tester effettua Q select e poi si generano le statistiche (min, max, avg).   
-In config.properties il paramentro numOfSelectExecutions consente di definire il numero di esecuzioni delle select.
+In config.properties il paramentro __numOfSelectExecutions__ consente di definire il numero di esecuzioni delle select.
 
 Compilazione e generazione del package
 --------------------
