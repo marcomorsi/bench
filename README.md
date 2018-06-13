@@ -8,10 +8,10 @@ Descrizione Progetto
 
 
 Il main contentuto nella omonima classe istanzia un BanchManager per lanciare i tests.
-In particolare il BanchManager apre la connessione al DB, crea una tabella di test (se già presente ne fa la drop), chiude la connessione e crea 2 istanze di Tester  (è l'esecutore vero e proprio dei test) uno per effettuare le Insert e uno per le Select (ho fatto due sotto classi concrete: InsertTester, SelectTester). Ad ogni tester istanziato, il BanchManager richiede l'esecuzione dei suoi test ed al termine stampa le statistiche (tempo min/max/avg per un batch di insert e per una singola select).
+In particolare il _BanchManager_ apre la connessione al DB, crea una tabella di test (se già presente ne fa la drop), chiude la connessione e crea 2 istanze di _Tester_  (è l'esecutore vero e proprio dei test) uno per effettuare le Insert e uno per le Select (ho fatto due sotto classi concrete: _InsertTester_, _SelectTester_). Ad ogni tester istanziato, il BanchManager richiede l'esecuzione dei suoi test ed al termine stampa le statistiche (tempo min/max/avg per un batch di insert e per una singola select).
 A sua volta un Tester apre la connessione al DB, genera il PreparedStatement opportuno e ad ogni esecuzione: setta i paramentri necessari, esegue lo statement, annota il tempo impiegato e controlla se il tempo impiegato può essere candidato come min o max. Ovviamente al termine di tutte le esecuzioni il Tester ha immediatamente il valore del tempo min/max, deve solo quindi calcolare il tempo avg e chiude la connessionel al DB.
-I testers si appoggiano ad un DbHelper per le operazioni di connessione/disconnessione al DB e di generazione, parametrizzazione ed esecuzione dei PreparedStatement.
-La classe ConfigHelper ha lo scopo di leggere il config.properties (presente in "src/main/resources") in cui sono presenti i paramentri per la connessione a PotgreSQL ed il numero di INSERT/SELECT.
+I testers si appoggiano ad un _DbHelper_ per le operazioni di connessione/disconnessione al DB e di generazione, parametrizzazione ed esecuzione dei PreparedStatement.
+La classe _ConfigHelper_ ha lo scopo di leggere il __config.properties__ (presente in "src/main/resources") in cui sono presenti i paramentri per la connessione a PotgreSQL ed il numero di INSERT/SELECT.
 
 Il primo tester gestisce le insert. Vengono eseguite in batch da N statements e la commit viene fatta al termine dal batch.
 Nel file config.properties il paramentro numOfInsertStatementsPerTransaction consente di definire il numero di statement per batch.
@@ -24,13 +24,15 @@ In config.properties il paramentro numOfSelectExecutions consente di definire il
 Compilazione e generazione del package
 --------------------
 
+```
 mvn clean package
-
+```
 Esecuzione del software
 --------------------
 
+```
 java -cp target/bench-1.0-SNAPSHOT.jar;lib/* com.morsiani.bench.main.Main
-
+```
 Esempio di output
 --------------------
 
