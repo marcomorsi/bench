@@ -49,10 +49,6 @@ public abstract class Tester {
 		return numOfExecutions;
 	}
 
-	public List<Long> getExecutionTimes() {
-		return executionTimes;
-	}
-
 	public long getMinTime() {
 		return minTime;
 	}
@@ -96,7 +92,7 @@ public abstract class Tester {
 		for (int i = 0; i < numOfExecutions; i++) {
 
 			// da eseguire prima di ogni test
-			beforeTest();
+			preTest();
 
 			// esegue il test e calcola il tempo di esecuzuione
 			long startTime = System.nanoTime();
@@ -105,7 +101,7 @@ public abstract class Tester {
 			long executionTime = end - startTime;
 
 			// da eseguire dopo ogni test
-			afterTest(holder);
+			postTest(holder);
 
 			// aggiunge l'esecuzione alla lista
 			executionTimes.add(executionTime);
@@ -142,7 +138,7 @@ public abstract class Tester {
 	/**
 	 * operazioni da eseguirsi prima di ogni test
 	 */
-	protected abstract void beforeTest();
+	protected abstract void preTest();
 
 	/**
 	 * test vero e proprio
@@ -153,7 +149,7 @@ public abstract class Tester {
 	/**
 	 * operazioni da eseguirsi dopo ogni test
 	 */
-	protected abstract void afterTest(Holder<ResultSet> holder);
+	protected abstract void postTest(Holder<ResultSet> holder);
 
 	
 	/**
@@ -172,9 +168,9 @@ public abstract class Tester {
 		Statistics stats = new Statistics();
 
 		if (numOfExecutions > 0) {
-			stats.put("min", minTime);
-			stats.put("max", maxTime);
-			stats.put("avg", avgTime);
+			stats.put("tempo min", minTime);
+			stats.put("tempo max", maxTime);
+			stats.put("tempo avg", avgTime);
 		}
 
 		return stats;
@@ -186,7 +182,7 @@ public abstract class Tester {
     */
 	public String getTestInfo() {
 
-		return "Executions: " + numOfExecutions + "\n";
+		return "N. esecuzioni: " + numOfExecutions + "\n";
 	}
 
 }

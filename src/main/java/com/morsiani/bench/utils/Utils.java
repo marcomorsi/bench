@@ -10,12 +10,6 @@ import java.sql.Timestamp;
 
 public class Utils {
 
-	public static Timestamp getCurrentTimeStamp() {
-
-		Date now = new Date();
-		return new java.sql.Timestamp(now.getTime());
-	}
-
 	public static String getRandomString(int size) {
 
 		char[] chars = "QWERTYUIOPASDFGHJKLZXCVBNM".toCharArray();
@@ -26,6 +20,12 @@ public class Utils {
 			sb.append(c);
 		}
 		return sb.toString();
+	}
+
+	public static Timestamp getCurrentTimeStamp() {
+
+		Date now = new Date();
+		return new java.sql.Timestamp(now.getTime());
 	}
 
 	public static int getRandomInt(int maxInt) {

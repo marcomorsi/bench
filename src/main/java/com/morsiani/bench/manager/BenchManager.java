@@ -28,10 +28,6 @@ public class BenchManager {
 		this.testers = new ArrayList<Tester>();
 	}
 
-	public List<Tester> getTesters() {
-		return testers;
-	}
-
 	/**
 	 * metodo che esegue i tests:<br>
 	 * - invoca init() per inizializzare i tests<br>
@@ -51,7 +47,7 @@ public class BenchManager {
 		}
 
 		for (Tester t : testers) {
-			printTesterStart(t);
+			printTesterPreRun(t);
 			t.runTests();
 			printTesterStatistics(t);
 		}
@@ -104,7 +100,7 @@ public class BenchManager {
 		// si puo' valutare di fare il drop della tabella. 
 	}
 
-	private void printTesterStart(Tester tester) {
+	private void printTesterPreRun(Tester tester) {
 		System.out.println("Running tester: " + tester.getTestName());
 		System.out.println("------------------------------------------------------");
 	}

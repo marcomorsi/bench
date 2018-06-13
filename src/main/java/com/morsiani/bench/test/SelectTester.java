@@ -40,7 +40,7 @@ public class SelectTester extends Tester {
 
 	// in questa fase imposto i parametri per la select PreparedStatement
 	@Override
-	protected void beforeTest() {
+	protected void preTest() {
 
 		int primaryKeyValue = 0;
 
@@ -60,7 +60,7 @@ public class SelectTester extends Tester {
 	}
 
 	@Override
-	protected void afterTest(Holder<ResultSet> holder) {
+	protected void postTest(Holder<ResultSet> holder) {
 
 		try {
 			ResultSet rs = holder.getContent();

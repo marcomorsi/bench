@@ -48,7 +48,7 @@ public class InsertTester extends Tester {
 
     //in questa fase imposto i parametri per la insert PreparedStatement
     @Override
-    protected void beforeTest() {
+    protected void preTest() {
         
     	//lista di entry che verranno inserite nel DB
         List<Entry> entries = new ArrayList<Entry>();
@@ -78,7 +78,7 @@ public class InsertTester extends Tester {
     }
 
     @Override
-    protected void afterTest(Holder<ResultSet> holder) {
+    protected void postTest(Holder<ResultSet> holder) {
     }
     
      @Override
@@ -96,8 +96,8 @@ public class InsertTester extends Tester {
     @Override
     public String getTestInfo() {
         
-        String info = "Batch Insert Executions: " + this.getNumOfExecutions() + "\n" + 
-                      "N. inserts in each batch: " + numInsertsPerTransaction + "\n";
+        String info = "N. esecuzioni di insert-batch: " + this.getNumOfExecutions() + "\n" + 
+                      "N. insert in ogni batch: " + numInsertsPerTransaction + "\n";
         
         return info;
     }
@@ -108,27 +108,27 @@ public class InsertTester extends Tester {
         
         if(this.getNumOfExecutions() > 0)
         {
-            stats.put("min (to insert a batch of records)", this.getMinTime());
-            stats.put("max (to insert a batch of records)", this.getMaxTime());
-            stats.put("avg (to insert a batch of records)", this.getAvgTime());
+            stats.put("tempo min (di insert di un batch di record)", this.getMinTime());
+            stats.put("tempo max (di insert di un batch di record)", this.getMaxTime());
+            stats.put("tempo avg (di insert di un batch di record)", this.getAvgTime());
 
-            long minTimePerRecord = 0;
-            long maxTimePerRecord = 0;
-            long avgTimePerRecord = 0;
+            long minTimePerRec = 0;
+            long maxTimePerRec = 0;
+            long avgTimePerRec = 0;
 
             if(numInsertsPerTransaction > 0)
             {
                 //costo di una singola insert in batch con min time
-                minTimePerRecord = this.getMinTime()/numInsertsPerTransaction;
+                minTimePerRec = this.getMinTime()/numInsertsPerTransaction;
                 //costo di una singola insert in batch con max time
-                maxTimePerRecord = this.getMaxTime()/numInsertsPerTransaction;
+                maxTimePerRec = this.getMaxTime()/numInsertsPerTransaction;
                 //costo medio per singola insert
-                avgTimePerRecord = this.getAvgTime()/numInsertsPerTransaction;
+                avgTimePerRec = this.getAvgTime()/numInsertsPerTransaction;
             }
 
-            stats.put("time per record in the batch with min time", minTimePerRecord);
-            stats.put("time per record in the batch with max time", maxTimePerRecord);
-            stats.put("avg (to insert a record)", avgTimePerRecord);
+            stats.put("tempo di insert di un record nel batch con tempo min", minTimePerRec);
+            stats.put("tempo di insert di un record nel batch con tempo max", maxTimePerRec);
+            stats.put("tempo di insert di un record nel batch con tempo avg", avgTimePerRec);
         }
 
         return stats;
